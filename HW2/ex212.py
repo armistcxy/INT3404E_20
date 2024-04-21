@@ -54,8 +54,6 @@ def DFT_2D(gray_img):
         row_fft: (H, W): 2D numpy array that contains the row-wise FFT of the input image
         row_col_fft: (H, W): 2D numpy array that contains the column-wise FFT of the input image
     """
-    # You need to implement the DFT here
-    H, W = gray_img.shape
     row_fft = np.fft.fft(gray_img, axis=1)
 
     row_col_fft = np.fft.fft(row_fft, axis=0)
